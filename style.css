@@ -290,6 +290,9 @@ body{
     align-items:center;
 
     padding:120px 20px;
+
+    position:relative;
+    z-index:20;
 }
 
 .hero-card{
@@ -421,6 +424,9 @@ body{
 
 .search-section{
     padding:40px;
+
+    position:relative;
+    z-index:20;
 }
 
 .search-box{
@@ -448,12 +454,15 @@ body{
 }
 
 /* TOC */
+
+
 .toc{
     position:fixed;
+
     top:110px;
     left:20px;
 
-    width:280px;
+    width:260px;
     height:calc(100vh - 160px);
 
     overflow-y:auto;
@@ -471,12 +480,8 @@ body{
     box-shadow:
         0 20px 60px rgba(0,0,0,.4);
 
-    z-index:100;
-
-
-    
+    z-index:10; /* pehle 100 tha */
 }
-
 
 
 .stat-card{
@@ -510,7 +515,11 @@ body{
     box-shadow:
         0 20px 50px rgba(99,102,241,.3),
         0 0 50px rgba(6,182,212,.2);
-}@media(max-width:1400px){
+}
+
+
+@media(max-width:1400px){
+
     .toc{
         display:none;
     }
@@ -520,7 +529,8 @@ body{
     .policy-container,
     .contact,
     footer{
-        margin-left:0;
+        margin:auto;
+        width:100%;
     }
 }
 
@@ -629,11 +639,15 @@ body{
 /* Sections */
 
 .policy-container{
-    max-width:900px;
+    width:100%;
+    max-width:800px;
 
-    margin:auto;
+    margin:0 auto;
 
     padding:40px 20px;
+
+    position:relative;
+    z-index:20;
 }
 
 .policy-section{
@@ -718,6 +732,9 @@ body{
     margin:100px auto;
 
     padding:50px;
+
+    position:relative;
+    z-index:20;
 }
 
 .contact-grid{
@@ -748,10 +765,15 @@ body{
 
 /* Footer */
 
+/* Footer */
+
 footer{
-    margin-left:340px;
+    margin-left:0;   /* remove 340px */
 
     padding:80px 40px;
+
+    max-width:1200px;
+    margin:0 auto;
 }
 
 .footer-grid{
@@ -830,7 +852,7 @@ footer{
     }
 }
 
-/* Responsive */
+/* sive */
 
 @media(max-width:768px){
 
@@ -890,6 +912,8 @@ footer{
     max-width:1000px;
     margin:80px auto;
 
+     position:relative;
+    z-index:20;
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -951,7 +975,8 @@ footer{
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-
+    position:relative;
+    z-index:20;
     margin:80px auto;
 }
 
